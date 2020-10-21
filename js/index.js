@@ -104,31 +104,12 @@ function renderButtons() {
     let greenPeppers = document.querySelector('.btn-green-peppers');
     let sauce = document.querySelector('.btn-sauce');
     let crust = document.querySelector('.btn-crust');
-    if (state.pepperoni) {
-        pepperoni.classList.add("active");
-    } else {
-        pepperoni.classList.remove("active");
-    }
-    if (state.mushrooms) {
-        mushrooms.classList.add("active");
-    } else {
-        mushrooms.classList.remove("active");
-    }
-    if (state.greenPeppers) {
-        greenPeppers.classList.add("active");
-    } else {
-        greenPeppers.classList.remove("active");
-    }
-    if (state.whiteSauce) {
-        sauce.classList.add("active");
-    } else {
-        sauce.classList.remove("active");
-    }
-    if (state.glutenFreeCrust) {
-        crust.classList.add("active");
-    } else {
-        crust.classList.remove("active");
-    }
+    crust.classList.toggle("active", state.glutenFreeCrust);
+    pepperoni.classList.toggle("active", state.pepperoni);
+    mushrooms.classList.toggle("active", state.mushrooms);
+    greenPeppers.classList.toggle("active", state.greenPeppers);
+    sauce.classList.toggle("active", state.whiteSauce);
+
 }
 
 function renderPrice() {
